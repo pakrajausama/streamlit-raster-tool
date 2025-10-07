@@ -10,6 +10,31 @@ import mapclassify
 from rasterio.warp import reproject, Resampling
 import matplotlib.colors as mcolors
 
+
+
+
+
+# Set page config first (must be first Streamlit command)
+st.set_page_config(
+    page_title="PakGeoHub - GIS Converter",
+    page_icon="🌍", 
+    layout="centered"
+)
+
+# --- Complete UI Cleanup ---
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+.stDeployButton {display:none;}
+#stAppViewChip {display:none;}
+#stAppViewAvatar {display:none;}
+.stAppViewHeader {display:none;}
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 # ==============================
 # APP TITLE
 # ==============================
